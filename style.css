@@ -1,4 +1,54 @@
 body {
-    background-color: skyblue;
+    background-color: white;
     color: black;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.conatiner {
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.sideBar {
+    width: 20vw;
+    padding: 2rem;
+    background: aqua;
+    margin: 1rem;
+}
+
+.mainContent {
+    width: 40vw;
+    background: aqua;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSideBar {
+    width: 20vw;
+    padding: 2rem;
+    background: aqua;
+    margin: 1rem;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topContent {
+    padding: 1rem;
+    background: white;
+    margin: 1rem;
+}
+
+.topContent img {
+    margin: auto 0;
 }
