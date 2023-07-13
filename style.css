@@ -14,19 +14,20 @@ body {
 }
 
 .sideBar {
-    width: 20vw;
+    /* width: 20vw; */
     padding: 2rem;
     background: aqua;
     margin: 1rem;
 }
 
 .mainContent {
-    width: 40vw;
+    /* width: 40vw; */
     background: aqua;
     margin: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .rightSideBar {
@@ -47,8 +48,21 @@ body {
     padding: 1rem;
     background: white;
     margin: 1rem;
+    max-width: 80%;
 }
 
 .topContent img {
     margin: auto 0;
+}
+
+.img {
+    background: url("https://www.hindustantimes.com/ht-img/img/2023/07/13/550x309/Screenshot_2023-07-13_222527_1689267360996_1689267370933.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+}
+
+.sideImg {
+    
 }
