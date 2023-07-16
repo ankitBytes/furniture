@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="./login.css" />
+</head>
+
+<body>
+
+    <div class="mainContent">
+    <nav style="width: 100vw; padding-bottom: 10vh;">
+        <div class="navbar">
+            <a href="/index.html">
+                <img src="https://www.hindustantimes.com/res/images/ht-logo.svg" alt="Hindusthan Times News" />
+            </a>
+        </div>
+    </nav>
+    <section class="wrapper">
+        <div class="form signup">
+          <header>Signup</header>
+          <form>
+            <input
+              type="text"
+              id="signup-fullname"
+              placeholder="Full name"   
+              required
+            />
+            <input
+              type="text"
+              id="signup-email"
+              placeholder="Email address"
+              required
+            />
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password"
+              required
+            />
+            <div class="checkbox">
+              <input type="checkbox" id="signupCheck" />
+              <label for="signupCheck">I accept all terms & conditions</label>
+            </div>
+            <button class="signupButton" type="button" onclick="signup()">
+              Sign Up
+            </button>
+          </form>
+        </div>
+  
+        <div class="form login">
+          <header>Login</header>
+          <form>
+            <input
+            type="text"
+            id="login-email"
+            placeholder="Email address"
+            required
+          />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <a href="#">Forgot password?</a>
+          <button class="loginButton" type="button" onclick="login()">
+            Login
+          </button>
+        </form>
+      </div>
+    </section>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function signup() {
+    var email = document.getElementById('signup-email').value;
+    var password = document.getElementById('signup-password').value;
+    var fullname = document.getElementById('signup-fullname').value;
+
+    if (email && password && fullname) {
+        var userData = {
+            email: email,
+            password: password,
+            fullname: fullname
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/users',
+            data: userData,
+            success: function (response) {
+                alert('Signup successful! Please login.');
+                // Redirect to login page or perform other actions
+            },
+            error: function (error) {
+                console.log('Error storing user data:', error);
+            }
+        });
+    } else {
+        alert('Please enter email, password, and full name.');
+    }
+}
+
+
+function login() {
+    var email = document.getElementById('login-email').value;
+    var password = document.getElementById('login-password').value;
+
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/users',
+        success: function (response) {
+            var users = response;
+            var user = users.find(function (u) {
+                return u.email === email && u.password === password;
+            });
+
+            if (user) {
+                alert('Login successful!');
+                // Redirect to a different page or perform other actions
+            } else {
+                alert('Invalid email or password.');
+            }
+        },
+        error: function (error) {
+            console.log('Error retrieving user data:', error);
+        }
+    });
+}
+
+
+const wrapper = document.querySelector(".wrapper"),
+    signupHeader = document.querySelector(".signup header"),
+    loginHeader = document.querySelector(".login header");
+
+loginHeader.addEventListener("click", () => {
+    wrapper.classList.add("active");
+});
+signupHeader.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+});
+    </script>
+</body>
+
+</html>

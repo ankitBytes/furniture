@@ -1,37 +1,52 @@
 body {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.486);
     color: black;
+    padding: 0;
+    margin: 0;
 }
 
 .mainContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .conatiner {
     display: flex;
-    background-color: antiquewhite;
+    background-color: #e4e4e4;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .sideBar {
-    /* width: 20vw; */
+    max-width: 15vw;
     padding: 2rem;
-    background: aqua;
+    min-height: 100vh;
+    max-height: 150vh;
+    background: white;
     margin: 1rem;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
 
 .mainContent {
     /* width: 40vw; */
-    background: aqua;
     margin: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: white;
+
+    @media (max-width: 900px) {
+        padding: 2rem 0;
+    }
+
 }
 
 .rightSideBar {
-    width: 20vw;
     padding: 2rem;
     background: aqua;
     margin: 1rem;
@@ -49,6 +64,16 @@ body {
     background: white;
     margin: 1rem;
     max-width: 80%;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.425) 0px 3px 8px;
+    }
+}
+
+.secondary {
+    display: flex;
+    flex-direction: row;
 }
 
 .topContent img {
@@ -61,8 +86,167 @@ body {
     background-position: center;
     background-size: cover;
     height: 20rem;
+
+    @media (max-width: 600px) {
+        background-size: contain;
+        height: 10rem;
+    }
 }
 
 .sideImg {
-    
+    background: url("https://www.hindustantimes.com/ht-img/img/2023/07/13/550x309/Screenshot_2023-07-13_222527_1689267360996_1689267370933.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    width: 10rem;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #111;
+}
+
+.footercontainer {
+    max-width: 100%;
+    padding: 70px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 600px) {
+        padding: 0;
+    }
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialicons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom {
+    color: white;
+}
+
+.Designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* @media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+} */
+/* .footerNav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+} */
+
+section a {
+    font-size: 1.3rem;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.containerNews {
+    padding: 2rem 0;
+    border-bottom: #111 0.8px solid;
+}
+
+.heading {
+    padding: 1rem 0;
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+.format {
+    color: skyblue;
+    font-weight: bold;
+}
+
+.published p, .time {
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.time {
+    padding: 0.5rem 0;
+}
+
+.topContent a {
+    font-size: 1.3rem;
+
+    @media (max-width: 500px) {
+        font-size: 1rem;
+    }
 }
