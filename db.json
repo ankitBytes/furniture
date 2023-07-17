@@ -1,34 +1,10 @@
 {
   "users": [
     {
-      "email": "sonusahu2703@gmail.com",
-      "password": "ankit123",
-      "fullname": "Ankit kumar sahu",
+      "email": "temp@gmail.com",
+      "password": "temp",
+      "fullname": "trial",
       "id": 1
-    },
-    {
-      "email": "trial@mail.com",
-      "password": "temp",
-      "fullname": "Ankit kumar sahu",
-      "id": 2
-    },
-    {
-      "email": "temp@gmail.com",
-      "password": "ank",
-      "fullname": "Ankit kumar sahu",
-      "id": 3
-    },
-    {
-      "email": "temp@gmail.com",
-      "password": "trial",
-      "fullname": "Ankit kumar sahu",
-      "id": 4
-    },
-    {
-      "email": "temp@gmail.com",
-      "password": "temp",
-      "fullname": "Ankit kumar sahu",
-      "id": 5
     }
   ]
 }
