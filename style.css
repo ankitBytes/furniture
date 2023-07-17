@@ -22,7 +22,7 @@ body {
     max-width: 15vw;
     padding: 2rem;
     min-height: 100vh;
-    max-height: 150vh;
+    /* max-height: 150vh; */
     background: white;
     margin: 1rem;
 
